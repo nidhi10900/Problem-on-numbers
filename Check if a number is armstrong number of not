@@ -1,0 +1,30 @@
+#Check if a number is armstrong number of not
+
+num = int(input())
+snum = str(num)
+n = len(snum)
+sum_n=0
+
+for i in snum:
+    sum_n+=int(i)**n
+
+if sum_n==num:
+  print("Yes it is armstrong")
+else:
+  print("No")
+    
+    
+def arm(num):
+  snum = str(num)
+  n = len(snum)
+  sum_n=0
+  for i in snum:
+    sum_n+=int(i)**n
+
+  if sum_n==num:
+    return "Yes it is armstrong"
+  else:
+    return"No"
+  
+num = int(input())
+print(arm(num))
