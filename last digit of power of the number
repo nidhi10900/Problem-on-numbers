@@ -1,0 +1,9 @@
+#N = int(input())
+K = int(input())
+res = N**K
+last = res%10
+print(last)
+
+#input N= 6
+#input k = 2 # 6*6 = 36
+# output 6
