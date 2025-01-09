@@ -1,0 +1,10 @@
+#factors of a given number
+
+int(input())
+fac = []
+for i in range(1,n+1):
+  if n%i==0:
+    fac.append(i)
+  else:
+    i+=1
+print(*fac)
