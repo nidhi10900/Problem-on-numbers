@@ -1,0 +1,22 @@
+# Check if a Number is Strong
+
+# Input the number
+number = int(input("Enter a number: "))
+original_num = number
+sum_of_factorials = 0
+
+# Loop to calculate the sum of factorials of digits
+while number > 0:
+    digit = number % 10
+    # Calculate factorial manually
+    factorial = 1
+    for i in range(1, digit + 1):
+        factorial *= i
+    sum_of_factorials += factorial
+    number //= 10
+
+# Check if the sum of factorials equals the original number
+if sum_of_factorials == original_num:
+    print(f"{original_num} is a Strong Number.")
+else:
+    print(f"{original_num} is NOT a Strong Number.")
