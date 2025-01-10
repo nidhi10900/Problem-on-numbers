@@ -1,8 +1,17 @@
 # palindrome of a numbers
-
 n = input()
 rev = n[::-1]
 if n==rev:
   print("yes")
 else:
   print("No")
+
+
+------------------------------------
+#palindrome of a number in given range
+
+mini = int(input())
+maxi = int(input())
+for i in range(mini,maxi+1):
+  if str(i)==str(i)[::-1]:
+    print(i)
