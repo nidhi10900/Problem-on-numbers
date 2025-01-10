@@ -1,0 +1,14 @@
+# Lcm and Gcd
+# lcm
+a, b = map(int, input("Enter two numbers: ").split())
+lcm = a * b
+while b:
+    a, b = b, a % b
+print(lcm // a)
+
+
+# gcd
+a, b = map(int, input("Enter two numbers: ").split())
+while b:
+    a, b = b, a % b
+print(a)
