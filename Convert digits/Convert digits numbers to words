@@ -1,0 +1,25 @@
+#Convert digits numbers to words
+from num2words import num2words
+num = int(input())
+print(num2words(num))
+
+--------------------------------------------------
+
+num = int(input())
+ones = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+teens = ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
+tens = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
+
+if 1<=num<10:
+  print(ones[num])
+elif 10<=num<20:
+  print(teens[num-10])
+elif 20<=num<100:
+  print(tens[num//10]+(" "+ ones[num%10] if num%10!=0 else ""))
+elif 100<=num<1000:
+  print(ones[num//100] +" hundered"+(" and "+tens[(num%100)//10]+(" "+ones[num%10])if num%100!=0 else ""))
+else:
+  print("Out of range")
+
+
+
