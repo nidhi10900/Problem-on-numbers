@@ -1,0 +1,10 @@
+#Replace all 0s with 1s in a given integer
+num = int(input())
+n = str(num)
+new = ''
+for i in n:
+  if i=='0':
+    new+='1'
+  else:
+    new+=i
+print(int(new))
