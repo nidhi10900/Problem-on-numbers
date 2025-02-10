@@ -1,0 +1,18 @@
+#Program to add two fractions
+frac = input()
+part = frac.split("+")
+a,b = map(int,part[0].split("/"))
+c,d = map(int,part[1].split("/"))
+nume = (a*d)+(c*b)
+deno = b*d
+
+def gcd(x,y):
+  while y:
+    x,y = y,x%y
+  return x
+  
+gcd_value = gcd(nume,deno)
+
+new_nume = nume//gcd_value
+new_deno = deno//gcd_value
+print(f"{new_nume}/{new_deno}")
